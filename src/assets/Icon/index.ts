@@ -1,6 +1,11 @@
-import LogoName from "assets/Icon/icons/LogoName.svg";
+import LogoName from "./icons/LogoName.svg";
 
-const icons = {
+const icons: {
+  [k: string]: React.FC<{
+    className?: string;
+    onClick?: (event: React.MouseEvent<SVGSVGElement, MouseEvent>) => void;
+  }>;
+} = {
   LogoName,
 };
 
