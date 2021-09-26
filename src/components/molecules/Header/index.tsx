@@ -1,23 +1,50 @@
-import * as React from "react";
+import React, { Component } from "react";
+import {
+  NavbarBrand,
+  Collapse,
+  NavItem,
+  Nav,
+  NavbarToggler,
+  NavLink,
+} from "reactstrap";
+import "bootstrap/dist/css/bootstrap.css";
+import { NavbarStyled } from "./styles";
+import icons from "../../../assets/Icon";
 
-const Header: React.FC = () => {
-  return (
-    <div>
-      <div>
-        <span>icono</span>
-        <div>
-          <span>Dashboard</span>
-          <span>Mis mascotas</span>
-        </div>
-      </div>
-      <div>
-        <span>Notificaciones</span>
-        <span>Ayuda</span>
-        <span>Citas</span>
-        <span>imagen</span>
-      </div>
-    </div>
-  );
+export interface Props {}
+
+type State = {
+  isOpen: boolean;
 };
 
-export default Header;
+const toggle = () => {
+  console.log("toggle");
+};
+
+export default class Header extends Component<Props, State> {
+  constructor(props: Props) {
+    super(props);
+    this.state = {
+      isOpen: false,
+    };
+  }
+  render() {
+    const { isOpen } = this.state;
+    return (
+      <NavbarStyled color="light" light expand="md">
+        <NavbarBrand href="/">VetWare</NavbarBrand>
+        <NavbarToggler onClick={toggle} />
+        <Collapse isOpen={isOpen} navbar>
+          <Nav className="mr-auto" navbar>
+            <NavItem>
+              <NavLink href="#">Dashboard</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="#">Mis mascotas</NavLink>
+            </NavItem>
+          </Nav>
+        </Collapse>
+      </NavbarStyled>
+    );
+  }
+}
