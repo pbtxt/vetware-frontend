@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, Button, CardTitle, CardText, Row, Col } from "reactstrap";
+import { Card, CardTitle, CardText, Row, Col } from "reactstrap";
 import { ActionButton } from "../../../assets/styles/CommonComponents/styles";
 
 export interface Props {}

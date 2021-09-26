@@ -28,6 +28,7 @@ export default class Header extends Component<Props, State> {
       isOpen: false,
     };
   }
+
   render() {
     const { isOpen } = this.state;
     return (
