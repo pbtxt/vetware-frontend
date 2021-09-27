@@ -7,7 +7,6 @@ import {
   NavbarToggler,
   NavLink,
 } from "reactstrap";
-import "bootstrap/dist/css/bootstrap.css";
 import { NavbarStyled } from "./styles";
 import icons from "../../../assets/Icon";
 
