@@ -1,5 +1,6 @@
 import App from "../components/App";
-import "../components/atoms/NewPetCard/styles.css";
+import "../components/molecules/NewPetCard/styles.css";
+import "../components/molecules/Modal/styles.css";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
