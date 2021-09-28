@@ -12,7 +12,7 @@ export async function getUsers() {
 
 export async function createNewPet(owner_email, name, species, breed) {
   return fetch("http://localhost:4000/api/pets", {
-    method: "GET",
+    method: "POST",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
@@ -23,7 +23,11 @@ export async function createNewPet(owner_email, name, species, breed) {
       species,
       breed,
     }),
-  }).then((data) => {
-    return data.json();
-  });
+  })
+    .then(() => {
+      console.log("saved");
+    })
+    .catch(() => {
+      console.log("error");
+    });
 }

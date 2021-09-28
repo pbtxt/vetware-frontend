@@ -1,5 +1,5 @@
 import * as React from "react";
-import NewPetCard from "../../atoms/NewPetCard";
+import NewPetCard from "../../molecules/NewPetCard";
 
 const MyPetsList: React.FC = () => {
   return (

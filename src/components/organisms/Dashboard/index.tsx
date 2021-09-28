@@ -1,6 +1,6 @@
 import * as React from "react";
 import CommonPageLayout from "../CommonPageLayout";
-import MyPetsList from "../../molecules/MyPetsList";
+import MyPetsList from "../MyPetsList";
 
 const Dashboard: React.FC = () => {
   return (
