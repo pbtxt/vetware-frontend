@@ -1,0 +1,65 @@
+.service-card-container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+  background: #ffffff;
+  box-shadow: 0 0 9px 0 rgb(0 0 0 / 20%);
+  border: 1px solid rgba(0, 60, 105, 0.6);
+  border-radius: 8px;
+}
+
+.service-card-title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+  color: #000000;
+  margin: 10px 0px;
+}
+
+.service-date-button {
+  background-color: #003c69;
+  padding: 5px 40px;
+  margin: 5px;
+  border-radius: 8px;
+  border-color: #003c69;
+  cursor: pointer;
+  color: white;
+}
+
+.service-info-button {
+  background-color: white;
+  padding: 5px 40px;
+  margin: 5px;
+  border-radius: 8px;
+  border-color: #003c69;
+  cursor: pointer;
+  color: #003c69;
+}
+
+.service-info-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  padding: 5px 0px;
+}
+
+.service-info-container label {
+  padding-right: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.service-info-container span {
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.service-buttons-container {
+  padding: 10px 0px;
+}
