@@ -3,9 +3,9 @@ import NewPetCard from "../../atoms/NewPetCard";
 
 const MyPetsList: React.FC = () => {
   return (
-    <div>
+    <div className="category-container">
       <div>
-        <span>Lista de mascotas</span>
+        <h1 className="category-title">Mis mascotas</h1>
       </div>
       <NewPetCard />
     </div>

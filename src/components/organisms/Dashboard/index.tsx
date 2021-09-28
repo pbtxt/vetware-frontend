@@ -11,8 +11,10 @@ const Dashboard: React.FC = () => {
       <div>
         <MyPetsList />
       </div>
-      <div>
-        <span>Lista de servicios disponibles</span>
+      <div className="category-container">
+        <h1 className="category-title">
+          Servicios disponibles para tus mascotas
+        </h1>
       </div>
     </CommonPageLayout>
   );

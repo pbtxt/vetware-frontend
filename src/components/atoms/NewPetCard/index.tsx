@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import { Card, CardTitle, CardText, Row, Col } from "reactstrap";
-import { ActionButton } from "../../../assets/styles/CommonComponents/styles";
 
 export interface Props {}
 
@@ -15,18 +13,14 @@ export default class NewPetCard extends Component<Props, State> {
   }
   render() {
     return (
-      <Row>
-        <Col sm="4">
-          <Card body>
-            <CardTitle tag="h5">Añadir una nueva mascota</CardTitle>
-            <CardText>
-              Agrega una nueva mascota para poder agendar citas para
-              tratamientos y para nuestra clínica veterinaria
-            </CardText>
-            <ActionButton>Crear</ActionButton>
-          </Card>
-        </Col>
-      </Row>
+      <div className="pet-card-container">
+        <h1 className="pet-card-title">Añadir una nueva mascota</h1>
+        <span className="pet-card-desc">
+          Agrega una nueva mascota para poder agendar citas para tratamientos y
+          para nuestra clínica veterinaria
+        </span>
+        <button className="actionButton">Crear</button>
+      </div>
     );
   }
 }
