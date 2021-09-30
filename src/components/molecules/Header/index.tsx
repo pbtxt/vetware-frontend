@@ -14,12 +14,15 @@ export default class Header extends Component<Props, State> {
 
   render() {
     return (
-      <div>
-        <div>
+      <div className="header-container">
+        <div className="header-item">
           <span>Dashboard</span>
         </div>
-        <div>
+        <div className="header-item">
           <span>Mis mascotas</span>
+        </div>
+        <div className="header-item">
+          <span>Nueva cita</span>
         </div>
       </div>
     );
