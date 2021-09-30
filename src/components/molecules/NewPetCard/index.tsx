@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { createNewPet } from "../../../utils/db";
 import Modal from "../Modal";
 
 export interface Props {}

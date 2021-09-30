@@ -8,6 +8,7 @@
   box-shadow: 0 0 9px 0 rgb(0 0 0 / 20%);
   border: 1px solid rgba(0, 60, 105, 0.6);
   border-radius: 8px;
+  margin-right: 10px;
 }
 
 .pet-card-title {
@@ -24,7 +25,6 @@
   line-height: 24px;
   color: #003c69;
   text-align: center;
-  margin: 10px 0px;
 }
 
 .actionButton {
@@ -47,4 +47,11 @@
 .category-container {
   background-color: #ececec;
   padding: 40px;
+}
+
+.category-dasboard-container {
+  background-color: #ececec;
+  padding: 10px;
+  display: flex;
+  align-items: center;
 }
