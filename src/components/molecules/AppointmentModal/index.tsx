@@ -45,9 +45,8 @@ export default class AppoinmentModal extends Component<Props, State> {
     } else if (!this.props.service_id) {
       console.log("no tiene servicio seleccionado");
       getServices().then((data) => {
-        console.log(data);
         let dataHelper = [];
-        if (data) {
+        if (data.length > 0) {
           data.map((item) => {
             item = { value: item._id, label: item.name };
             dataHelper.push(item);
@@ -64,9 +63,8 @@ export default class AppoinmentModal extends Component<Props, State> {
     } else if (!this.props.pet_id) {
       console.log("no tiene mascota seleccionada");
       getPets("6154d65179f1d977b8832977").then((data) => {
-        console.log(data);
         let dataPetsHelper = [];
-        if (data) {
+        if (data.length > 0) {
           data.map((item) => {
             item = { value: item._id, label: item.name };
             dataPetsHelper.push(item);
@@ -90,18 +88,25 @@ export default class AppoinmentModal extends Component<Props, State> {
   };
 
   handleNewAppoinment = () => {
-    createNewAppoinment("", "", "", "").then(() => {
+    const { pet, service, date } = this.state;
+    createNewAppoinment(pet, service, date, "created").then(() => {
       this.props.show();
     });
   };
 
-  setServiceValues = (list) => {};
+  setPet = (petSelected) => {
+    this.setState({ pet: petSelected.value });
+  };
+
+  setService = (serviceSelected) => {
+    this.setState({ service: serviceSelected.value });
+  };
 
   closeModal = () => {
     this.props.show();
   };
   render() {
-    const { pet, service, date, services_list, pets_list } = this.state;
+    const { date, services_list, pets_list } = this.state;
     return (
       <div className="modal-container">
         <h1>Crear una nueva cita</h1>
@@ -111,11 +116,21 @@ export default class AppoinmentModal extends Component<Props, State> {
         </div>
         <div className="modal-items-container">
           <label htmlFor="species">Mascota</label>
-          {pets_list && <Select options={pets_list} />}
+          {pets_list && (
+            <Select
+              options={pets_list}
+              onChange={(selectedValue) => this.setPet(selectedValue)}
+            />
+          )}
         </div>
         <div className="modal-items-container">
           <label htmlFor="species">Servicio</label>
-          {services_list && <Select options={services_list} />}
+          {services_list && (
+            <Select
+              options={services_list}
+              onChange={(selectedValue) => this.setService(selectedValue)}
+            />
+          )}
         </div>
         <div className="modal-button-container">
           <button className="modal-button" onClick={this.handleNewAppoinment}>
