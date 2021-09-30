@@ -10,6 +10,7 @@ interface Props {
   pet_id?: string;
   pet_name?: string;
 }
+
 type State = {
   pet: string;
   service: string;
@@ -17,12 +18,6 @@ type State = {
   services_list: { value: string; lable: string }[];
   pets_list: { value: string; lable: string }[];
 };
-
-const options = [
-  { value: "chocolate", label: "Chocolate" },
-  { value: "strawberry", label: "Strawberry" },
-  { value: "vanilla", label: "Vanilla" },
-];
 
 export default class AppoinmentModal extends Component<Props, State> {
   constructor(props: Props) {

@@ -1,5 +1,6 @@
 .service-card-container {
   width: 400px;
+  height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,6 +9,11 @@
   box-shadow: 0 0 9px 0 rgb(0 0 0 / 20%);
   border: 1px solid rgba(0, 60, 105, 0.6);
   border-radius: 8px;
+}
+
+.service-card-container img {
+  width: 200px;
+  height: 200px;
 }
 
 .service-card-title {
