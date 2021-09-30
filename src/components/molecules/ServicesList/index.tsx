@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { getServices } from "../../../utils/db";
 
 export interface Props {
   name: string;
