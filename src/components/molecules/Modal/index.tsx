@@ -51,6 +51,10 @@ export default class Modal extends Component<Props, State> {
     });
   };
 
+  hideModal = () => {
+    this.props.show();
+  };
+
   render() {
     const { owner_email, name, species, breed } = this.state;
     return (
@@ -90,6 +94,9 @@ export default class Modal extends Component<Props, State> {
         <div className="modal-button-container">
           <button className="modal-button" onClick={this.handleNewPet}>
             Guardar y crear
+          </button>
+          <button className="modal-button" onClick={this.hideModal}>
+            Cancelar
           </button>
         </div>
       </div>
