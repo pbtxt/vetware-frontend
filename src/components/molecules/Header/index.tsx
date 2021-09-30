@@ -1,25 +1,8 @@
 import React, { Component } from "react";
-import {
-  NavbarBrand,
-  Collapse,
-  NavItem,
-  Nav,
-  NavbarToggler,
-  NavLink,
-} from "reactstrap";
-import "bootstrap/dist/css/bootstrap.css";
-import { NavbarStyled } from "./styles";
-import icons from "../../../assets/Icon";
 
 export interface Props {}
 
-type State = {
-  isOpen: boolean;
-};
-
-const toggle = () => {
-  console.log("toggle");
-};
+type State = {};
 
 export default class Header extends Component<Props, State> {
   constructor(props: Props) {
@@ -28,23 +11,20 @@ export default class Header extends Component<Props, State> {
       isOpen: false,
     };
   }
+
   render() {
-    const { isOpen } = this.state;
     return (
-      <NavbarStyled color="light" light expand="md">
-        <NavbarBrand href="/">VetWare</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="mr-auto" navbar>
-            <NavItem>
-              <NavLink href="#">Dashboard</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="#">Mis mascotas</NavLink>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </NavbarStyled>
+      <div className="header-container">
+        <div className="header-item">
+          <span>Dashboard</span>
+        </div>
+        <div className="header-item">
+          <span>Mis mascotas</span>
+        </div>
+        <div className="header-item">
+          <span>Nueva cita</span>
+        </div>
+      </div>
     );
   }
 }

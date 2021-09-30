@@ -1,6 +1,5 @@
 import * as React from "react";
 import Header from "../../molecules/Header";
-import { LayoutContainer, CommonLayoutContainer } from "./styles";
 
 interface CommonPageLayoutProps {
   children: React.ReactNode;
@@ -12,12 +11,12 @@ interface CommonPageLayoutProps {
 
 const CommonPageLayout: React.FC<CommonPageLayoutProps> = ({ children }) => {
   return (
-    <LayoutContainer>
+    <div>
       <Header />
       <main>
-        <CommonLayoutContainer>{children}</CommonLayoutContainer>
+        <div>{children}</div>
       </main>
-    </LayoutContainer>
+    </div>
   );
 };
 

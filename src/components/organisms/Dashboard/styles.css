@@ -1,0 +1,12 @@
+.services-list-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0px;
+}
+
+.welcome-user h1 {
+  padding: 20px 40px;
+  background-color: #ececec;
+  margin-bottom: 0px;
+}
