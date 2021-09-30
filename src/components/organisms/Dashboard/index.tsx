@@ -9,9 +9,10 @@ const Dashboard: React.FC = () => {
     { name: "Servicio de peluquería", duration: 60, src_img: "" },
     { name: "Cita médica", duration: 120, src_img: "" },
   ];
+
   return (
     <CommonPageLayout>
-      <div>
+      <div className="welcome-user">
         <h1>Hola, Paola Natasha</h1>
       </div>
       <div>

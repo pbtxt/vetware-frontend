@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { getServices } from "../../../utils/db";
+import AppoinmentModal from "../AppointmentModal/index";
 
 export interface Props {
   name: string;
@@ -45,7 +46,13 @@ export default class ServicesList extends Component<Props, State> {
           </button>
           <button className="service-info-button">Ver información</button>
         </div>
-        {/* {showModal && <Modal show={this.handleModal} />} */}
+        {showModal && (
+          <AppoinmentModal
+            show={this.handleModal}
+            service_id=""
+            owner_email=""
+          />
+        )}
       </div>
     );
   }
