@@ -1,5 +1,5 @@
 export async function getUsers() {
-  return fetch("http://localhost:4000/api/users", {
+  return fetch("https://0f7b-161-18-118-1.ngrok.io/api/users", {
     method: "GET",
     headers: {
       Accept: "application/json",
@@ -11,7 +11,7 @@ export async function getUsers() {
 }
 
 export async function createNewPet(owner_email, name, species, breed) {
-  return fetch("http://localhost:4000/api/pets/newPet", {
+  return fetch("https://0f7b-161-18-118-1.ngrok.io/api/pets/newPet", {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -33,7 +33,7 @@ export async function createNewPet(owner_email, name, species, breed) {
 }
 
 export async function getServices() {
-  return fetch("http://localhost:4000/api/services/getServices", {
+  return fetch("https://0f7b-161-18-118-1.ngrok.io/api/services/getServices", {
     method: "GET",
     headers: {
       Accept: "application/json",
@@ -50,7 +50,7 @@ export async function createNewAppoinment(
   appointment_date,
   status
 ) {
-  return fetch("http://localhost:4000/api/appointments/newAppointment", {
+  return fetch("https://0f7b-161-18-118-1.ngrok.io/api/appointments/newAppointment", {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -72,7 +72,7 @@ export async function createNewAppoinment(
 }
 
 export async function getPets(owner_id) {
-  return fetch("http://localhost:4000/api/pets/getUserPets", {
+  return fetch("https://0f7b-161-18-118-1.ngrok.io/api/pets/getUserPets", {
     method: "POST",
     headers: {
       Accept: "application/json",
